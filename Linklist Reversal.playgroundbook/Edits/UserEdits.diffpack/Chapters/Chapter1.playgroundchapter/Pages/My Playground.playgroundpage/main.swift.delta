@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>class Node{
+    let value: Int
+    var next: Node?
+    
+    init(value:Int,next:Node?){
+        self.value = value
+        self.next = next
+    }
+}
+
+func printValues(head:Node?){
+    var curr = head
+    while curr != nil{
+        print(curr?.value)
+        curr = curr?.next
+    }
+}
+
+var thirdNode = Node(value: 15, next: nil)
+var secondNode = Node(value: 10, next: thirdNode)
+var firstNode = Node(value: 5, next: secondNode)
+var counter = 0
+printValues(head: firstNode)
+func reverseLinkList(head:Node?) -&gt; Node?{
+    var curr = head
+    var prev: Node?
+    var next: Node?
+    while curr != nil{
+        next = curr?.next
+        curr?.next = prev
+        prev = curr
+        curr = next
+    }
+    return prev
+}
+
+var afterReverse = reverseLinkList(head: firstNode)
+print("After Reversal")
+printValues(head: afterReverse)
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 823}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
