@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>class Node{
+    let value:Int
+    var left:Node?
+    var right:Node?
+    
+    init(value:Int,left:Node?,right:Node?){
+        self.value = value
+        self.right = right
+        self.left = left 
+    }
+}
+var leafRight = Node(value: 5, left: nil, right: nil)
+var leafLeft = Node(value: 4, left: nil, right: nil)
+var rightChild = Node(value: 3, left: nil, right: nil)
+var leftChild = Node(value: 2, left: leafLeft, right: leafRight)
+var root = Node(value: 1, left: leftChild, right: rightChild)
+
+func inOrderTreeTraversal(head:Node?){
+    let curr = head
+    if curr == nil{
+        return 
+    }
+    inOrderTreeTraversal(head: curr?.left)
+    print(curr?.value)
+    inOrderTreeTraversal(head: curr?.right)
+    
+}
+inOrderTreeTraversal(head: root)
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 747}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
