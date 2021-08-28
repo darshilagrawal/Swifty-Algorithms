@@ -18,6 +18,16 @@ class MyLinkList{
             return false
         }
     }
+    var last:LinkList?{
+        guard var node = head else {
+              return nil
+            }
+          
+            while let next = node.next {
+              node = next
+            }
+            return node
+    }
 }
 
 let list = MyLinkList()
