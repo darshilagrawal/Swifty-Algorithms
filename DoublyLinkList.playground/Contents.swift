@@ -51,18 +51,22 @@ class MyLinkList{
         return count
     }
     
-    func find(val:Int)->Bool{
+    func find(val:Int)->Int{
+        var pos = 1
         guard var node = head else{
-            return false
+            return -1
+        }
+        if node.value == val{
+            return 0
         }
         while let next = node.next{
-            
-            if node.value == val{
-                return true
+            if next.value == val{
+                return pos
             }
+            pos += 1
             node = next
         }
-        return false
+        return -1
     }
     
 }
@@ -75,3 +79,6 @@ list.append(val: 10)
 print(list.count)
 list.find(val: 3)
 list.find(val: 56)
+list.find(val: 10)
+list.append(val: 20)
+list.find(val: 20)
