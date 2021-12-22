@@ -1,5 +1,5 @@
 # Swifty-Algorithms
- Algorithms and Data Structure Practice Done Using Swift
+ Algorithms and Data Structure Practice Done exclusively Using Swift
  
  Recent Topics Covered:
  ### 1)Linklist
